@@ -1,5 +1,7 @@
 # 💻 Projeto ADS – Sistema Integrado
 
+---
+
 ## 📌 Sobre o Projeto
 
 O **Projeto ADS Sistema Integrado** é uma iniciativa acadêmica voltada ao desenvolvimento de uma aplicação robusta e completa. O sistema foi planejado para integrar diferentes camadas de tecnologia, garantindo uma experiência fluida desde a persistência de dados até a interface com o usuário final.
