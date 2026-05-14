@@ -75,12 +75,11 @@ Mantenha o histórico de mensagens limpo e padronizado:
 ## 🔄 Fluxo de Trabalho Acadêmico
 
 1. **Clonar** o repositório localmente.
-2. Criar a sua **branch** de trabalho.
-3. Realizar as alterações necessárias.
-4. Adicionar os arquivos: `git add .`
-5. Realizar o commit: `git commit -m "tipo: descrição clara"`
-6. Enviar para o servidor: `git push origin [nome-da-sua-branch]`
-7. Abrir o **Pull Request** no GitHub para revisão do Grupo 1.
+2. Realizar as alterações necessárias.
+3. Adicionar os arquivos: `git add .`
+4. Realizar o commit: `git commit -m "tipo: descrição clara"`
+5. Enviar para o servidor: `git push origin [nome-da-sua-branch]`
+6. Abrir o **Pull Request** no GitHub para revisão do Grupo 1.
 
 ---
 
