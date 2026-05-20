@@ -3,7 +3,9 @@ name: Validação de Pull Request
 # 1. Define QUANDO essa ação vai rodar
 on:
   pull_request:
-    branches: [ "main" ] # Executa sempre que um PR for aberto contra a branch 'main'
+    branches: 
+      - "Develop"
+      - "Staging"
 
 # 2. Define O QUE vai ser feito
 jobs:
