@@ -1,0 +1,38 @@
+name: Validação de Pull Request
+
+# 1. Define QUANDO essa ação vai rodar
+on:
+  pull_request:
+    branches: 
+      - "Develop"
+      - "Staging"
+
+# 2. Define O QUE vai ser feito
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # O servidor virtual onde o código vai rodar
+
+    steps:
+    # Passo A: Copia o código do repositório para o servidor virtual
+    - name: Fazer o Checkout do código
+      uses: actions/checkout@v4
+
+    # Passo B: Instala a linguagem e define a versão
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11" # Altere para a versão que você utiliza
+
+    # Passo C: Instala dependências do seu projeto e ferramentas de validação
+    - name: Instalar dependências
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8
+        # Se você tiver um requirements.txt, descomente a linha abaixo:
+        # pip install -r requirements.txt
+
+    # Passo D: Executa a validação (Linters, Testes, etc.)
+    - name: Rodar verificação de código com Flake8
+      run: |
+        # Isso vai falhar o PR se houver erros graves de sintaxe ou variáveis não usadas
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
